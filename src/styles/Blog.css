@@ -1,0 +1,34 @@
+/* Blog.css */
+
+/* Container styling for each blog post */
+.blog-post-container {
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 20px;  
+    border-radius: 5px;  /* optional: to round the borders of each blog post */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* optional: to give a shadow to each blog post */
+}
+
+/* Styling for the text content within each blog post */
+.text-content {
+    line-height: 1.6; 
+    word-wrap: break-word;
+    max-width: 100%; /* or any specific value you prefer */
+    overflow-wrap: break-word;
+    margin-bottom: 10px;  /* optional: to add some space between text content and subsequent elements */
+    white-space: normal;
+}
+
+.text-content br {
+    margin-bottom: 10px;
+    display: block;
+    content: "";
+}
+
+/* Styling for the code block within each blog post */
+.code-block {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;  /* optional: to round the borders of code block */
+    margin-bottom: 10px;  /* optional: to add some space between code block and subsequent elements */
+}

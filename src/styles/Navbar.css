@@ -1,0 +1,24 @@
+/* styles/Navbar.css */
+/* styles/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* You can adjust this value as per your preference */
+  height: 100vh;
+  background-color: #333;
+  overflow-y: auto; /* in case there are more items than can fit on the screen */
+}
+
+  
+  .navbar a {
+    display: block;
+    padding: 10px 15px;  /* This adds some spacing around the links */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: #007BFF;
+  }
+  
