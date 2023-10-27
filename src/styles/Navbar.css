@@ -1,24 +1,49 @@
 /* styles/Navbar.css */
-/* styles/Navbar.css */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px; /* You can adjust this value as per your preference */
+  width: 250px; 
   height: 100vh;
   background-color: #333;
-  overflow-y: auto; /* in case there are more items than can fit on the screen */
+  overflow-y: auto; 
+  transform: translateX(-100%); /* By default, push the navbar out of the view */
+  transition: transform 0.3s ease-in-out; /* Animation to slide the navbar in/out */
+  z-index: 20; /* Ensures the navbar is above other elements */
 }
 
-  
-  .navbar a {
-    display: block;
-    padding: 10px 15px;  /* This adds some spacing around the links */
-    color: #fff;
-    text-decoration: none;
+.navbar.open {
+  transform: translateX(0); /* Slide the navbar into view */
+}
+
+.navbar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  z-index: 30; /* This ensures the button is above the navbar */
+}
+
+.navbar a {
+  display: block;
+  padding: 10px 15px;  
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #007BFF;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    transform: translateX(0); /* Display the navbar as usual on larger screens */
   }
-  
-  .navbar a:hover {
-    color: #007BFF;
+
+  .navbar-toggle {
+    display: none; /* Hide the toggle button on larger screens */
   }
-  
+}

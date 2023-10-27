@@ -22,17 +22,26 @@ function Blog() {
 	if (!post) return <p>Post not found!</p>;
 
 	return (
+		// <div className="blog-post-container">
+		// 	<h1>{post.title}</h1>
+		// 	{post.content.map((item, i) => {
+		// 		switch (item.type) {
+		// 			case "text":
+		// 				return <NewlineText key={i} text={item.value} />;
+		// 			case "code":
+		// 				return <CodeBlock key={i} code={item.value} />;
+		// 			case "image":
+		// 				return (
+		// 					<img key={i} src={item.value} alt="" className="blog-image" />
+		// 				);
+		// 			default:
+		// 				return null;
+		// 		}
+		// 	})}
+		// </div>
 		<div className="blog-post-container">
 			<h1>{post.title}</h1>
-			{post.content.map((item, i) => {
-				if (item.type === "text") {
-					return <NewlineText key={i} text={item.value} />;
-				} else if (item.type === "code") {
-					return <CodeBlock key={i} code={item.value} />;
-				} else {
-					return null;
-				}
-			})}
+			{post.content}
 		</div>
 	);
 }

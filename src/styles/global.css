@@ -31,4 +31,8 @@ body {
   font-family: Arial, sans-serif;
 }
 
-  
+@media (max-width: 767px) {
+  .content-container {
+    padding-left: 0;
+  }
+}
