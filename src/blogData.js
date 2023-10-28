@@ -221,7 +221,7 @@ const blogPosts = [
 					given text (a single document) <br />
 					Given a term <em>t</em> and document <em>d</em>, the TF is:
 				</p>
-				<img src="/TF-formula.jpg" style={{ width: "400px", height: "auto" }} />
+				<img src="/TF-formula.JPG" style={{ width: "400px", height: "auto" }} />
 				<br />
 				<br />
 				<strong>Step 2: Inverse Document Frequency (TF-IDF)</strong>
@@ -232,7 +232,7 @@ const blogPosts = [
 					Given a term <em>t</em> and a set of documents <em>D</em>, the IDF is:
 				</p>
 				<img
-					src="/IDF-formula.jpg"
+					src="/IDF-formula.JPG"
 					style={{ width: "400px", height: "auto" }}
 				/>
 				<br />
@@ -245,7 +245,7 @@ const blogPosts = [
 					Given a term <em>t</em> and a set of documents <em>D</em>, the IDF is:
 				</p>
 				<img
-					src="/TF-IDF-formula.jpg"
+					src="/TF-IDF-formula.JPG"
 					style={{ width: "400px", height: "auto" }}
 				/>
 				<br />
