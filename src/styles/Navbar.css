@@ -18,12 +18,12 @@
 
 .navbar-toggle {
   position: fixed;
-  top: 15px;
-  left: 15px;
-  background: #333;
+  top: 5px;
+  left: 195px;
+  background: #0a5ca0;
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 5px 10px;
   z-index: 30; /* This ensures the button is above the navbar */
 }
 
@@ -38,12 +38,3 @@
   color: #007BFF;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    transform: translateX(0); /* Display the navbar as usual on larger screens */
-  }
-
-  .navbar-toggle {
-    display: none; /* Hide the toggle button on larger screens */
-  }
-}
