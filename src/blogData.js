@@ -112,7 +112,7 @@ const blogPosts = [
 							astronauts in orbiting spacecraft and by robotic spacecraft. Some
 							of the most significant advancements in space exploration have
 							occurred in recent decades, including landing humans on the Moon
-							and the development of reusable rockets."
+							and the development of reusable rockets. "
 						</code>
 					</pre>
 				</p>
