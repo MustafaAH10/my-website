@@ -257,11 +257,6 @@ const blogPosts = [
 			</>
 		),
 	},
-	{
-		id: "2",
-		title: "Second Post",
-		content: [{ type: "text", value: "Content of the second post." }],
-	},
 ];
 
 export default blogPosts;

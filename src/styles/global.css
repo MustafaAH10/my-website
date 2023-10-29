@@ -4,6 +4,17 @@
   flex-direction: column;  /* stack Navbar and content vertically */
   align-items: center;     /* center everything horizontally */
   width: 100%;             /* occupy the full width of the viewport */
+  background-color: #eedcbb;
+}
+
+.home-container {
+  width: 80%;              /* occupy 80% of the viewport width; can adjust as needed */
+  max-width: 1200px;       /* maximum width for better readability on wide screens */
+  word-wrap: break-word;   /* ensure long unbroken strings wrap */
+  overflow-wrap: break-word; /* handle wrapping long words */
+  margin: 20px 0;          /* give some vertical spacing */
+  background-color: #f1e2c6;
+  padding: 25px;
 }
 
 .content-container {
@@ -12,6 +23,7 @@
   word-wrap: break-word;   /* ensure long unbroken strings wrap */
   overflow-wrap: break-word; /* handle wrapping long words */
   margin: 20px 0;          /* give some vertical spacing */
+  background-color: #f5eaea;
 }
 
 .navbar {

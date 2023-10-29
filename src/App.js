@@ -10,9 +10,13 @@ function App() {
 		<Router>
 			<div className="app-container">
 				<Navbar />
-				<div className="content-container">
+				<div className="home-container">
 					<Routes>
 						<Route path="/" element={<Home />} />
+					</Routes>
+				</div>
+				<div className="content-container">
+					<Routes>
 						<Route path="/blog/:postId" element={<Blog />} />
 					</Routes>
 				</div>

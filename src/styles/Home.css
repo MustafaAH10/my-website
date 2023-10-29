@@ -9,7 +9,6 @@ p {
 
 /* Education Timeline */
 .education-timeline {
-    padding-left: 40px;
     border-left: 4px solid #6d6464;
     margin-bottom: 50px;
 }
@@ -23,14 +22,14 @@ p {
 .school-logo {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit:contain ;
 }
 
 .school-details h3 {
     margin: 0;
     font-size: 20px;
     font-weight: 600;
+    align-content: flex-start;
 }
 
 .school-details p {
@@ -57,6 +56,39 @@ h2 {
     margin-bottom: 20px;
 }
 
+.social-links {
+    display: flex;
+    gap: 20px; /* Adjust for spacing between logos */
+    margin-top: 20px; /* Spacing below the paragraph */
+}
+
+.social-links img {
+    width: 40px; /* Adjust to your desired size */
+    height: 40px;
+    transition: opacity 0.3s ease;
+
+    /* Optional: Add a hover effect */
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #333; /* You can adjust the color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px; /* Spacing from social links */
+    transition: background-color 0.3s ease;
+
+    /* Optional: Add a hover effect */
+    &:hover {
+        background-color: #555;
+    }
+}
+
 .date {
     position: absolute;
     left: 0;
@@ -72,25 +104,33 @@ h2 {
 }
 
 .card {
-    background-color: #f9f9f9;
+    background-color: #e2a974e0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
+.card-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Use default color for text */
+    display: block; /* Make the link block-level */
+}
+
 .card:hover {
-    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow on hover for visual effect */
+    transform: translateY(-10px); /* Optional slight lift effect on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .card-description {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 
