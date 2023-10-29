@@ -1,4 +1,5 @@
-// blogData.js
+import { codeString3 } from "./codeString3";
+
 const codeString1 = `from sklearn.feature_extraction.text import CountVectorizer
 
 #Vocabulary
@@ -40,6 +41,39 @@ for doc, vector in zip(documents, X.toarray()):
 \tfor word, score in zip(feature_names, vector):
 \t\tprint(f"{word}: {score:.4f}")
 `;
+
+const codeString4 = `#pip install nltk (in case not done earlier)
+import nltk
+nltk.download('wordnet')
+from nltk.stem import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+documents = [" ".join([lemmatizer.lemmatize(word) for word in doc.split()]) for doc in documents]
+
+documents = [doc.lower() for doc in documents]
+`;
+
+const codeString5 = `from sklearn.feature_extraction.text import CountVectorizer
+
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(documents)`;
+
+const codeString6 = `from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.25, random_state=42)`;
+
+const codeString7 = `from sklearn.naive_bayes import MultinomialNB
+
+classifier = MultinomialNB()
+classifier.fit(X_train, y_train)`;
+
+const codeString8 = `from sklearn.metrics import accuracy_score
+
+y_pred = classifier.predict(X_test)
+print(y_test) #[0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0]
+print(y_pred) #[0 1 0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0]
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy * 100:.2f}%") #Accuracy: 64.00%;`;
 
 const blogPosts = [
 	{
@@ -101,20 +135,6 @@ const blogPosts = [
 						datasets and can tokenize text into word and subword units based on
 						the patterns they've learned.
 					</li>
-					<pre>
-						<code>
-							# Sample Data <br />
-							corpus = "Space exploration is the ongoing discovery and
-							exploration of celestial structures in outer space by means of
-							continuously evolving and growing space technology. While the
-							study of space is carried out mainly by astronomers with
-							telescopes, the physical exploration of space is conducted both by
-							astronauts in orbiting spacecraft and by robotic spacecraft. Some
-							of the most significant advancements in space exploration have
-							occurred in recent decades, including landing humans on the Moon
-							and the development of reusable rockets. "
-						</code>
-					</pre>
 				</p>
 				<br />
 				<strong>
@@ -136,6 +156,11 @@ const blogPosts = [
 						<strong>Lemmatization:</strong>
 						<br />
 					</li>
+					<p>
+						Lemmatization is a more involved process that looks at the
+						morphology of words and aims to return their canonical or dictionary
+						form.
+					</p>
 				</p>
 				<pre>
 					<code>pip install nltk</code>
@@ -253,7 +278,58 @@ const blogPosts = [
 				<pre>
 					<code>{codeString2}</code>
 				</pre>
-				<p>This is a conclusion to the first post.</p>
+				<strong>
+					<u>Building the Model</u>
+				</strong>
+				<br />
+				<p>
+					Now that we have word embeddings, we should be able to use this data
+					to train the model. This step would look very similar to other ML
+					projects. After selecting a suitable model for the task, we use
+					labelled data to train the model for supervised tasks and fine-tune
+					the model using a validation set.
+					<br />
+					Lastly, we can do some evaluation with metrics and cross-validation to
+					verify the results.
+					<br /> <br />
+					Let's try and implement a simple but functional text classification
+					task using the techniques and concepts we have seen above! There are a
+					bunch of standard reviews and their respective score (1 for positive
+					and 0 for negative) as follows:
+				</p>
+				<pre>
+					<code>{codeString3}</code>
+				</pre>
+				Lemmatization and Case-Matching:
+				<pre>
+					<code>{codeString4}</code>
+				</pre>
+				Word Embeddings (or Feature Extraction):
+				<pre>
+					<code>{codeString5}</code>
+				</pre>
+				Splitting data for training and testing:
+				<pre>
+					<code>{codeString6}</code>
+				</pre>
+				Here, I use the Multinomial Naive-Bayes classifier traditionally used
+				for BoW-style data and smaller datasets. You can also use SVMs
+				(generally used for text with high dimensionality), Random Forests
+				(minimal tuning required), Gradient Boosting (more tuning required) and
+				Neural Networks (requires a lot of data for training) but all have their
+				own different drawbacks and advantages.
+				<pre>
+					<code>{codeString7}</code>
+				</pre>
+				Checking out our model performance:
+				<pre>
+					<code>{codeString8}</code>
+				</pre>
+				<br />
+				<p>
+					This brings us to the end of my first blog post - thanks for reading/
+					following along! And stay tuned for more posts coming!
+				</p>
 			</>
 		),
 	},
